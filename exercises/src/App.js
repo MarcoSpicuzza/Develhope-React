@@ -10,5 +10,3 @@ export class App extends React.Component {
         );
     }
 }
-
-// YOU CAN PASS PROPS AS JSX WITH SQUARE BRACKETS IF NOT... IT WILL CATCH THE ENTIRE HTML CODE AS A STRING AND WON'T WORK
