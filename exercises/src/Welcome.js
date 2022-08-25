@@ -7,3 +7,9 @@ export class Welcome extends React.Component {
         );
     }
 }
+
+Welcome.defaultProps = {
+    name: 'Default User'
+};
+
+// IF NO NAME IS SET A BLANK TEXT HAPPERS REACT APP STILL WORKS.

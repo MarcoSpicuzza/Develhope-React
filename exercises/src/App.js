@@ -10,3 +10,5 @@ export class App extends React.Component {
         );
     }
 }
+
+// IF NO NAME IS SET A BLANK TEXT HAPPERS REACT APP STILL WORKS.
