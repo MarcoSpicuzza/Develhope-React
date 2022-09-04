@@ -9,9 +9,12 @@ export class Counter extends React.Component {
         super(props);
 
         setInterval(() => {
-            this.setState({
-                counter: this.state.counter + 1,
-            });
+            // this.setState(previousState => ({
+            //     counter: previousState + 1          FUNCTION/CALLBACK SETSTATE
+            // })
+            // {
+            //     counter: this.state.counter + 1,     OBJECT SETSTATE
+            // });
         }, 1000);
     }
 
