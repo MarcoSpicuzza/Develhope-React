@@ -9,12 +9,31 @@ export class Counter extends React.Component {
     constructor(props) {
         super(props);
 
-        setInterval(() => {
-            this.setState({
-                counter: this.state.counter + this.props.incrementAmount,
-            });
-        }, this.props.incrementInterval);
-    }
+        // ESERCIZIO SVOLTO TRAMITE CONDIZIONE IF
+        // ESERCIZIO SVOLTO TRAMITE CONDIZIONE IF
+        // ESERCIZIO SVOLTO TRAMITE CONDIZIONE IF
+    //     setInterval(() => {
+    //         this.setState(previousState => {
+    //             if (previousState.counter >= this.props.initialValue * 10) {
+    //                 return {
+    //                     counter: this.props.initialValue
+    //                 }
+    //             }
+    //             else return {
+    //                 counter: previousState.counter + this.props.incrementAmount
+    //             }
+    //         })
+    //     }, this.props.incrementInterval);
+    // }
+
+            setInterval(() => {
+                this.setState(previousState => ({
+                    counter: previousState.counter >= this.props.initialValue * 10
+                    ?   this.props.initialValue
+                    :   previousState.counter + this.props.incrementAmount
+                }))
+            }, this.props.incrementInterval);
+        };
 
     render() {
         return (
