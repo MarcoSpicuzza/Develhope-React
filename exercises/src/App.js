@@ -4,7 +4,7 @@ const App = () => {
   return ( 
     <>
       <h1>
-        <Counter />
+        <Counter initialValue={0} incrementInterval={1000} incrementAmount={1}/>
       </h1>
     </>
    );
