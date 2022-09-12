@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {InteractiveWelcome} from './InteractiveWelcome';
-import { Login } from "./Login";
-import { UncontrolledLogin } from './UncontrolledLogin';
+import {Colors} from './Colors';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <InteractiveWelcome />
-    <Login />
-    <UncontrolledLogin />
+    <Colors items={["Rosso", "Giallo", "Verde", "Bianco"]}/>
   </React.StrictMode>
 );
 
