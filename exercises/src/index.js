@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {InteractiveWelcome} from './InteractiveWelcome';
+import { Login } from "./Login";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <InteractiveWelcome />
+    <Login />
   </React.StrictMode>
 );
 
