@@ -17,10 +17,15 @@ export class UncontrolledLogin extends React.Component {
         this.reference.current.elements.remember.checked = true;
     }
 
+    // SOLUZIONE CON DIDMOUNT
+    // componentDidMount() {
+    //     this.reference.current.elements.username.focus();
+    // }
+
     render() {
         return (
              <form ref={this.reference} onSubmit={this.handleLogin}>
-                <input type="text" name="username"/>
+                <input type="text" name="username" autoFocus/>
                 <input type="password" name="password"/>
                 <input type="checkbox" name="remember"/>
                 <button name="login">LOGIN</button>
