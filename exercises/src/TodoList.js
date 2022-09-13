@@ -3,21 +3,21 @@ import React from "react";
 export class TodoList extends React.Component {
     state = {
         items: ['Patata', 'Cipolla'],
-        value: '',
+        value: ''
     }
 
     onChangeInput = (event) => {
         const inputValue = event.target.value;
 
         this.setState({
-            value: inputValue,
+            value: inputValue
         })
     }
 
     onClickHandler = () => {
         this.setState(prevState => ({
             items: [...prevState.items, prevState.value],
-            value: '',
+            value: ''
             // METODO ALTERNATIVO TRAMITE USO DI CONCAT - shallow copy
             // items: prevState.items.concat(prevState.value),
             // items: [].concat(prevState.items, prevState.value),
@@ -25,9 +25,7 @@ export class TodoList extends React.Component {
     }
 
     onClickResetHandler = () => {
-        this.setState(() => ({
-            items: [],
-        }))
+        this.setState( {items: []} )
     }
 
     render() {
