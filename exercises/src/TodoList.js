@@ -17,6 +17,10 @@ export class TodoList extends React.Component {
     onClickHandler = () => {
         this.setState(prevState => ({
             items: [...prevState.items, prevState.value],
+            value: '',
+            // METODO ALTERNATIVO TRAMITE USO DI CONCAT - shallow copy
+            // items: prevState.items.concat(prevState.value),
+            // items: [].concat(prevState.items, prevState.value),
         }))
     }
 
@@ -27,7 +31,7 @@ export class TodoList extends React.Component {
                     {this.state.items.map((item, index) => <li key={item + index}>{item}</li>)}
                 </ul>
                 <input type="text" value={this.state.value} onChange={this.onChangeInput}/>
-                <button onClick={this.onClickHandler}>BUTTON</button>
+                <button onClick={this.onClickHandler}>AGGIUNGI</button>
             </div>
         );
     }
