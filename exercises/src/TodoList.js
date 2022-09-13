@@ -28,11 +28,17 @@ export class TodoList extends React.Component {
         this.setState( {items: []} )
     }
 
+    onClickRemoveHandler = item => {
+        this.setState(prevState => ({
+            items: prevState.items.filter(i => i !== item)
+        }))
+    }
+
     render() {
         return (
             <div>
                 <ul>
-                    {this.state.items.map((item, index) => <li key={item + index}>{item}</li>)}
+                    {this.state.items.map((item, index) => <li key={item + index}>{item} <button onClick={() => this.onClickRemoveHandler(item)}>REMOVE</button></li>)}
                 </ul>
                 <input type="text" value={this.state.value} onChange={this.onChangeInput}/>
                 <button onClick={this.onClickHandler}>ADD</button>
