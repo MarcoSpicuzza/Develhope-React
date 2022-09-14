@@ -15,13 +15,13 @@ export class ClickCounter extends React.Component {
 
     render() {
         return (
-             <>
-                <h3>
+            <div style={{backgroundColor: "maroon", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: 'center'}}>
+                <h3 style={{color: "white"}}>
                     {this.state.counter}
                 </h3>
-                <button onClick={this.incrementCounter}>
+                <button style={{width: "100px", padding: "10px", backgroundColor: "white", color: "black", border: "3px solid black", borderRadius:"5px"}} onClick={this.incrementCounter}>CLICK ME!
                 </button>
-             </>
+            </div>
         );
     }
 }
