@@ -7,7 +7,7 @@ import { Container } from "./Container";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Container>
+    <Container title='Welcome'>
       <InteractiveWelcome />
       <Login />
     </Container>

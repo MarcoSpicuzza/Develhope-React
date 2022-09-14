@@ -10,6 +10,7 @@ export class Container extends React.Component {
 
         return (
              <div style={backgroundColor}>
+                <h1>{this.props.title}</h1>
                 {this.props.children}
              </div>
         );
