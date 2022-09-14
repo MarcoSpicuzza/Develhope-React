@@ -28,10 +28,14 @@ export class Login extends React.Component {
     }
 
     render() {
+        const backgroundColor = {
+            backgroundColor: this.state.password.length < 8 ? 'red' : 'green'
+        }
+
         return (
             <form action="">
                 <input type="text" name="username" value={this.state.username} onChange={this.handleInputChange} />
-                <input type="password" name="password" value={this.state.password} onChange={this.handleInputChange}/>
+                <input type="password" name="password" style={backgroundColor} value={this.state.password} onChange={this.handleInputChange}/>
                 <input type="checkbox" name="remember"checked={this.state.remember} onChange={this.handleCheckboxChange}/>
             </form>
         );
