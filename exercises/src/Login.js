@@ -5,6 +5,7 @@ export class Login extends React.Component {
         username: '',
         password: '',
         remember: false,
+        login: false,
     }
     
     handleInputChange = (event) => {
