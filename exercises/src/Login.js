@@ -27,7 +27,7 @@ export class Login extends React.Component {
         })
     }
 
-    onclick = () => {
+    onLogin = () => {
         this.setState({
             login: true
         })
