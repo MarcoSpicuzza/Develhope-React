@@ -17,7 +17,7 @@ export class ClickCounter extends React.Component {
     render() {
         return (
              <>
-                <h3>
+                <h3 className="display-1">
                     {this.state.counter}
                 </h3>
                 <CounterButton incrementCounter={this.incrementCounter}/>
