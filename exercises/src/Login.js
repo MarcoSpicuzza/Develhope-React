@@ -29,7 +29,9 @@ export class Login extends React.Component {
 
     onLogin = () => {
         this.setState({
-            login: true
+            login: true,
+        }, () => {
+            console.log(this.state.login);
         })
     }
 
