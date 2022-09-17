@@ -7,11 +7,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Colors items={[{name: "Rosso", id: 1}, {name: "Verde", id: 2}, {name: "Arancione", id: 3}, {name: "Bianco", id: 5}]}/>
-    <TodoList render={(items, removeFunction) => 
-        <ul>
-          {items.map((item, index) => <li key={item + index}>{item} <button onClick={() => removeFunction(item)}>REMOVE</button></li>)}
-        </ul>
+    <TodoList>
+        {(items, removeFunction) => 
+          <ul>
+            {items.map((item, index) => <li key={item + index}>{item} <button onClick={() => removeFunction(item)}>REMOVE</button></li>)}
+          </ul>
         }
-    ></TodoList>
+    </TodoList>
   </React.StrictMode>
 );
