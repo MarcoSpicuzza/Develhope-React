@@ -5,7 +5,7 @@ const App = () => {
     return ( 
         <div>
             <Welcome />
-            <Sum numbers={[1, 2, 3]}/>
+            <Sum />
         </div>
      );
 }
