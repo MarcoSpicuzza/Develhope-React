@@ -1,9 +1,11 @@
 import Welcome from "./Welcome";
+import Sum from "./Sum";
 
 const App = () => {
     return ( 
         <div>
-            <Welcome/>
+            <Welcome />
+            <Sum numbers={[1, 2, 3]}/>
         </div>
      );
 }
