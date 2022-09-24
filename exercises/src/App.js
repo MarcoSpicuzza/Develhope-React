@@ -1,9 +1,10 @@
 import { createContext, useState } from "react";
 import DisplayLanguage from "./DisplayLanguage";
 
+export const LanguageContext = createContext('it');
+
 const App = () => {
-    const LanguageContext = createContext('it');
-    const [language, setLanguage] = useState();
+    const [language, setLanguage] = useState("it");
 
     function changeLanguage(e) {
         setLanguage(e.target.value)   
