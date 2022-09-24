@@ -1,50 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 
-export class Login extends React.Component {
-    state = {
+const Login = () => {
+    const [form, setForm] = useState({
         username: '',
         password: '',
         remember: false,
-        login: false,
-    }
-    
-    handleInputChange = (event) => {
-        const value = event.target.value;
-        const name = event.target.name;
-        const type = event.target.type;
-        const checked = event.target.checked;
+        login: false
+    })
 
-        this.setState({
-            [name]: type === 'checkbox' ? checked : value,
-        })
+    function handleInputChange(e) {
+        const {name, type, value, checked} = e.target
+        setForm(prevData => ({
+            ...prevData,
+            [name]: type === 'checkbox' ? checked : value
+        }))
     }
 
-    handleCheckboxChange = (event) => {
-        const name = event.target.name
-        const checked = event.target.checked;
-
-        this.setState({
-            [name]: checked,
-        })
+    function onLogin() {
+        setForm(prevData => ({
+            ...prevData,
+            login: true
+        }))
     }
 
-    onLogin = () => {
-        this.setState({
-            login: true,
-        }, () => {
-
-            console.log(this.state.login);
-        })
-    }
-
-    render() {
-        return (
-            <div>
-                <input type="text" name="username" value={this.state.username} onChange={this.handleInputChange} />
-                <input type="password" name="password" value={this.state.password} onChange={this.handleInputChange}/>
-                <input type="checkbox" name="remember"checked={this.state.remember} onChange={this.handleCheckboxChange}/>
-                {this.state.username && this.state.password ? <button name="login" onClick={this.onLogin}>LOGIN</button> : <button name="login" disabled>LOGIN</button>}
-            </div>
-        );
-    }
+    return ( 
+        <div>
+            <input type="text" name="username" value={form.username} onChange={handleInputChange} />
+            <input type="password" name="password" value={form.password} onChange={handleInputChange}/>
+            <input type="checkbox" name="remember"checked={form.remember} onChange={handleInputChange}/>
+            {form.username && form.password ? <button name="login" onClick={onLogin}>LOGIN</button> : <button name="login" disabled>LOGIN</button>}
+        </div>
+     );
 }
+ 
+export default Login;
