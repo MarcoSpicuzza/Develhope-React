@@ -1,27 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export class Counter extends React.Component {
-    state = {
-        counter: 0,
-    }
+const Counter = () => {
+    const [counter, setCounter] = useState(0);
 
-    constructor(props) {
-        super(props);
-
-        setInterval(() => {
-            this.setState({
-                counter: this.state.counter + 1,
-            });
-        }, 1000);
-    }
-
-    render() {
-        return (
-          <>
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCounter(prevState => prevState + 1)
+        }, 1000)
+        console.log("MOUNT");
+        return () => {
+            clearInterval(interval);
+            console.log("UNMOUNT");
+        }   
+    }, [counter]);
+    return ( 
+        <>
             <h1>
-                Counter: {this.state.counter}
+                Counter: {counter}
             </h1>
-          </>
-        );
-    }
+        </>
+     );
 }
+ 
+export default Counter;
