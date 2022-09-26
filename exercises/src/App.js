@@ -1,9 +1,12 @@
-import GithubUser from "./GithubUser";
+import React from "react";
+import GithubUserList from "./GithubUserList";
 
 const App = () => {
     return ( 
-        <GithubUser username="marcospicuzza"/>
-     );
+        <div>
+            <GithubUserList usernames={["marcospicuzza", "msimile", "rickcrypto90"]}/>
+        </div>
+    );
 }
  
 export default App;
