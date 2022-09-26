@@ -1,4 +1,4 @@
-import { LanguageContext } from "./App";
+import LanguageContext from "./App";
 
 const DisplayLanguage = () => {
     return ( 

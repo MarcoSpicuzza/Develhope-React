@@ -1,7 +1,6 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
+import { LanguageContext } from "./LanguageContext";
 import DisplayLanguage from "./DisplayLanguage";
-
-export const LanguageContext = createContext('it');
 
 const App = () => {
     const [language, setLanguage] = useState("it");
