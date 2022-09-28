@@ -1,3 +1,4 @@
+import React from "react";
 import GithubUser from "./GithubUser";
 
 const App = () => {
