@@ -1,13 +1,16 @@
-import LanguageContext from "./App";
+import { useContext } from "react";
+import { LanguageContext } from "./LanguageContext";
 
 const DisplayLanguage = () => {
+    const language = useContext(LanguageContext)
+    const languages = {
+        it: {italiano: "Benvenuto Utente!"},
+        en: {english: "Welcome User!"}
+    }
     return ( 
         <div>
-            <LanguageContext.Consumer>
-                {language => (
-                    language === "it" ? <p>Benvenuto utente!</p> : <p>Welcome user!</p>
-                )}
-            </LanguageContext.Consumer>
+            <h1>{languages[language].italiano}</h1>
+            <h1>{languages[language].english}</h1>
         </div>
      );
 }

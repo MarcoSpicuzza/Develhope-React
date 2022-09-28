@@ -8,7 +8,7 @@ const App = () => {
     function changeLanguage(e) {
         setLanguage(e.target.value)   
     }
-
+    
     return ( 
         <div>
             <select name="language" onChange={changeLanguage}>
