@@ -1,14 +1,17 @@
 import React from "react";
 import ClickCounter from "./ClickCounter";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-export class App extends React.Component {
-  render() {
-    return (
-       <>
-          <h1>
-              <ClickCounter/>
-          </h1>
-       </>
-    );
-  }
+const App = () => {
+  return (
+    <>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<ClickCounter initialValue={2} increment={2} />} />
+          </Routes>
+        </BrowserRouter>
+    </>
+  );
 }
+
+export default App
