@@ -1,14 +1,23 @@
 import React from "react";
-import Counter from "./Counter";
+import FilteredList from "./FilteredList";
+
+const list = [
+  {id: 1, name: "Marco", age:22},
+  {id: 2, name: "Pedro", age:30},
+  {id: 2, name: "Mirco", age:29},
+  {id: 2, name: "Gianni", age:20}
+]
 
 const App = () => {
-  return ( 
+  return (
     <>
       <h1>
-        <Counter />
+        <ul>LIST
+          <FilteredList list={list}/>
+        </ul>
       </h1>
     </>
-   );
+  );
 }
 
 export default App;
