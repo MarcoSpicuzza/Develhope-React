@@ -1,11 +1,17 @@
-import Welcome from "./Welcome";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Welcome from "./Welcome"
 
 const App = () => {
     return ( 
         <div>
-            <Welcome/>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Welcome name="Marco"/>} />
+                </Routes>
+            </BrowserRouter>
         </div>
-     );
+    );
 }
  
 export default App;
