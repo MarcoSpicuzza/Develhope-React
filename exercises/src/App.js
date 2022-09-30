@@ -19,6 +19,7 @@ const App = () => {
                     <Route path='/' element={<Welcome name="Marco"/>} />
                     <Route path="/counter" element={<Counter initialValue={2} increment={2} />} />
                     <Route path='/users' element={<div><GithubUserList usernames={["marcospicuzza"]} /><Outlet/></div>} >
+                        <Route index element={<div><h1>Add a user and select it</h1></div>} />
                         <Route path=':username' element={<ShowGithubUser/>} /> 
                     </Route> 
                 </Routes>
