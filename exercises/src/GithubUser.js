@@ -11,7 +11,7 @@ const GithubUser = ({username}) => {
 
     return ( 
         <>
-            <div>{data && <h1>{data.login} {data.id}</h1>}</div>
+            <div>{data && <h1>name: {data.login} <br></br> bio: {data.bio}</h1>}</div>
         </>
      );
 }
