@@ -14,6 +14,7 @@ const App = () => {
                     <Link to="/users/marcospicuzza">GITHUB</Link>&nbsp;
                 </div>
                 <Routes>
+                    <Route path='*' element={<> <h1>Page Not Found</h1> <br/> <Link to="/">HOME</Link> </>}/>
                     <Route path='/' element={<Welcome name="Marco"/>} />
                     <Route path="/counter" element={<Counter initialValue={2} increment={2} />} />
                     <Route path='users/:username' element={<ShowGithubUser/>} /> 
