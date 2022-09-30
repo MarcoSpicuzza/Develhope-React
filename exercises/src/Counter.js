@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ClickCounter = () => {
+const Counter = () => {
     const [counter, setCounter] = useState(0)
 
     function incrementCounter() {
@@ -17,4 +17,4 @@ const ClickCounter = () => {
    );
 }
  
-export default ClickCounter
+export default Counter

@@ -1,5 +1,5 @@
 import React from "react";
-import ClickCounter from "./ClickCounter";
+import Counter from "./Counter";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -7,7 +7,7 @@ const App = () => {
     <>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<ClickCounter initialValue={2} increment={2} />} />
+            <Route path="/counter" element={<Counter initialValue={2} increment={2} />} />
           </Routes>
         </BrowserRouter>
     </>
